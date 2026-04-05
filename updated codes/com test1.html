@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+<title>Computer Science - Bhattadev University</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* LOADER */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #020617;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    z-index: 2000;
+    animation: fadeOut 1s ease 2s forwards;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #020617;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    transform: translateY(-100%);
+    animation: slideDown 0.8s ease forwards;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #bae6fd;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.btn {
+    background: #38bdf8;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: black;
+}
+
+/* HEADER */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #020617, #0ea5e9);
+    padding: 40px;
+    gap: 30px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.class1 img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.class2 {
+    text-align: center;
+}
+
+/* SECTIONS */
+.subjects {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.subjects h2 {
+    color: #38bdf8;
+}
+
+/* GRID */
+.subject-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 05rem;
+}
+
+/* CARDS */
+.subject-card {
+    background: #020617;
+    border: 1px solid #38bdf8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(56,189,248,0.4);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+    text-align: justify;
+}
+
+/* STAGGER */
+.subject-card:nth-child(1){animation-delay:0.2s;}
+.subject-card:nth-child(2){animation-delay:0.4s;}
+.subject-card:nth-child(3){animation-delay:0.6s;}
+.subject-card:nth-child(4){animation-delay:0.8s;}
+
+/* HOVER */
+.subject-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 30px rgba(56,189,248,0.8);
+}
+
+/* LIST */
+.subject-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subject-card li {
+    margin: 8px 0;
+}
+
+.subject-card a {
+    text-decoration: none;
+    color: #38bdf8;
+}
+
+.subject-card a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+    background: #020617;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(40px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideDown {
+    to {transform: translateY(0);}
+}
+
+@keyframes fadeOut {
+    to {opacity:0; visibility:hidden;}
+}
+
+/* RESPONSIVE ONLY FOR SUBJECT SECTION */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .subjects {
+        padding: 50px 20px;
+    }
+
+    .subject-container {
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .subjects {
+        padding: 40px 15px;
+    }
+
+    .subjects h2 {
+        font-size: 22px;
+    }
+
+    .subject-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 2rem;
+    }
+
+    .subject-card {
+        padding: 18px;
+        text-align: justify;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .subjects {
+        padding: 30px 12px;
+    }
+
+    .subject-card {
+        padding: 15px;
+    }
+
+    .subject-card h3 {
+        font-size: 16px;
+    }
+
+    .subject-card li {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">💻 Loading Computer Science...</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">💻 R Developers</div>
+    <ul class="nav-links">
+        <li><a href="bhattadev test 2.html">🏠 Home</a></li>
+        <li><a href="about test1.html">ℹ️ About</a></li>
+        <li><a href="https://www.bhattadevuniversity.ac.in">🎓 University</a></li>
+        <li><a href="portfolio test1.html">💼 Portfolio</a></li>
+        <li><a href="contact test.html" class="btn">📞 Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
+<section>
+    <div class="container">
+        <div class="class1">
+            <img src="C:\Users\islam\OneDrive\Desktop\Bhattadev paper project\updated codes\photos\computer.png" width="160">
+        </div>
+        <div class="class2">
+            <h1>💻 Computer Science</h1>
+            <h3>Major & Minor Papers</h3>
+        </div>
+    </div>
+</section>
+
+<!-- MAJOR -->
+<section class="subjects">
+    <h2>🧠 Major</h2>
+
+    <div class="subject-container">
+
+        <div class="subject-card">
+            <h3>1st Sem</h3>
+            <ul>
+                <li><a href="papers/cse/2025 1st sem cse.pdf">📄 CSE (CORE) 2025</a></li><br>
+                <li><a href="papers/cse/2025 1st sem cse (SEC).pdf">📄 CSE(SEC) 2025</a></li><br>
+                <li><a href="papers/cse/2024 1st sem cse.pdf">📄 CSE(CORE) 2024 </a></li><br>
+                <li><a href="papers/cse/2024 1st sem cse(SEC).pdf">📄 CSE(SEC) 2024</a></li>
+                
+            </ul>
+        </div>
+    
+        <div class="subject-card">
+            <h3>2nd Sem</h3>
+            <ul>
+                <li><a href="papers/cse/UG 2nd sem major (CSE).pdf">📄 CSE(CORE) 2025</a></li><br>
+                <li><a href="papers/cse/2025 2nd sem cse(SEC).pdf">📄 CSE(SEC) 2025</a></li><br>
+                <li><a href="">📄 CSE 2026 <Span style="color: red;">Available soon</Span></a></li><br>
+                <li><a href="">📄 CSE 2026 <Span style="color: red;">Available soon</Span></a></li><br>
+            
+            </ul>
+        </div>
+    </div>
+
+    <div class="subject-container">
+        <div class="subject-card">
+            <h3>3rd Sem</h3>
+            <ul>
+                <li><a href="papers/cse/UG 3rd sem major 1 (CSE-DSD).pdf">📄CSE(CORE) 2025</a></li><br>
+                <li><a href="papers/cse/UG 3rd sem major 2 (CSE- MATHS).pdf">📄 CSE(Mathematics) 2025</a></li><br>
+                <li><a href="papers/cse/3rd sem cse(SEC).pdf">📄 CSE(SEC) 2025</a></li><br>
+                <li><a href="">📄 CSE 2026 <Span style="color: red;">Available soon</Span></a></li><br>
+                <li><a href="">📄 CSE 2026 <Span style="color: red;">Available soon</Span></a></li><br>
+               
+            </ul>
+        </div>
+
+        <div class="subject-card">
+            <h3>4th Sem</h3>
+            <ul>
+                <li><a href="">📄 CSE 2026 <Span style="color: red;">Available soon</Span></a></li><br>
+                <li><a href="">📄 CSE 2026 <Span style="color: red;">Available soon</Span></a></li><br>
+                <li><a href="">📄 CSE 2026 <Span style="color: red;">Available soon</Span></a></li><br>
+                <li><a href="">📄 CSE 2026 <Span style="color: red;">Available soon</Span></a></li><br>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© Bhattadev University | Developed by Raj Ahmed 🚀</p>
+</footer>
+
+</body>
+</html>
