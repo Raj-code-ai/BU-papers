@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Section</title>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* NAVBAR (IMPROVED) */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #0d1b2a, #1b263b);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e0e1dd;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0e1dd;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #00b4d8;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #00b4d8;
+}
+
+/* Button */
+.btn {
+    background: #00b4d8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #fff !important;
+}
+
+.btn:hover {
+    background: #0096c7;
+}
+
+/* ===== YOUR ORIGINAL CONTENT (UNCHANGED) ===== */
+
+/* Section */
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Title */
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #0d1b2a;
+}
+
+/* Cards Container */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s forwards;
+}
+
+.card:nth-child(1){ animation-delay: 0.2s; }
+.card:nth-child(2){ animation-delay: 0.4s; }
+.card:nth-child(3){ animation-delay: 0.6s; }
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Icon */
+.card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #e67e22;
+}
+
+/* Text */
+.card h3 {
+    margin-bottom: 15px;
+    color: #0d1b2a;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">🚀 R Developers</div>
+    <ul class="nav-links">
+        <li><a href="bhattadev test 2.html">🏠 Home</a></li>
+        <li><a href="about test1.html">ℹ️ About</a></li>
+        <li><a href="https://www.bhattadevuniversity.ac.in">🎓 University</a></li>
+        <li><a href="portfolio test1.html">💼 Portfolio</a></li>
+        <li><a href="contact test.html" class="btn">📞 Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+    <h1>About This Website</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <i class="fas fa-book"></i>
+            <h3>Extensive Resources</h3>
+            <p>This platform provides organized access to previous year question papers across multiple subjects.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-search"></i>
+            <h3>Easy Access</h3>
+            <p>Students can quickly search and access study materials without difficulty.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Academic Growth</h3>
+            <p>Improve preparation, confidence, and performance using past papers.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-layer-group"></i>
+            <h3>Organized Collection</h3>
+            <p>All papers are categorized by subject, course, and year.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-clock"></i>
+            <h3>Time-Saving</h3>
+            <p>Everything is available in one place for quick access.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-sync-alt"></i>
+            <h3>Regular Updates</h3>
+            <p>Latest papers are continuously added.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
